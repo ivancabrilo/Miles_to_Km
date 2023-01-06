@@ -1,0 +1,95 @@
+# import pandas
+#
+# # student_dict = {
+# #     "student" : ["Angela", "James", "Lilly"],
+# #     "score" : [56, 76, 98]
+# # }
+# #
+# # for (key,value) in student_dict.items():
+# #      print(key)
+# #
+# # student_data = pandas.DataFrame(student_dict)
+# # print(student_data)
+# #
+# # for (index, row) in student_data.iterrows():
+# #     if row.student == "Angela":
+# #         print(row.score)
+#
+# from tkinter import *
+#
+#
+# # Button
+#
+# def button_clicked():
+#     print("I got clicked")
+#     new_text = input.get()
+#     my_label.config(text=new_text)
+#
+# window = Tk()
+# window.title("My First GUI Program")
+# window.minsize(width = 500, height = 300)
+#
+# # Label
+#
+# my_label = Label(text="I am Ivan", font=("Arial", 24, "italic"))
+# my_label.config(text="New Text")
+# my_label.grid(column=0, row=0)
+#
+# # my_label["text"] = "I am 19"
+#
+# button = Button(text="Click me", command=button_clicked)
+# button.grid(column=1,row=1)
+#
+# # new button
+# new_button = Button(text="I am new button")
+# new_button.grid(column=2,row=0)
+# # Entry
+#
+# input = Entry(width=10)
+# input.grid(column=3, row=2)
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# window.mainloop()
+
+from tkinter import *
+
+def miles_to_km():
+    miles = float(miles_input.get())
+    km = miles * 1.609
+    kilometer_result_label.config(text=f"{km}")
+
+
+window = Tk()
+window.minsize(width=300,height=150)
+window.config(padx=20, pady=20)
+window.title("Miles to Kilometer Converter")
+
+miles_input = Entry()
+miles_input.grid(column=1, row=0)
+
+miles_label = Label(text="Miles")
+miles_label.grid(column=2, row=0)
+
+is_equal_label = Label(text="is equal to")
+is_equal_label.grid(column=0, row=1)
+
+kilometer_result_label = Label(text="0")
+kilometer_result_label.grid(column=1, row=1)
+
+kilometer_label = Label(text="Km")
+kilometer_label.grid(column=1, row=2)
+
+calculate_button = Button(text="Calculate",command=miles_to_km)
+calculate_button.grid(column=1, row=2)
+
+window.mainloop()
